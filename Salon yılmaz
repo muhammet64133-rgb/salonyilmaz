@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manisa Salon Yılmaz Erkek Kuaförü | Manisa Anatomik Saç Kesimi</title>
+<meta name="description" content="Manisa Salon Yılmaz Erkek Kuaförü. Manisa Anatomik Saç Kesimi, Taper Fade, Dokulu Kırpma, sakal tasarımı ve kişiye özel yüz analizli kesim hizmetleri.">
+<meta name="keywords" content="MANİSA SALON YILMAZ ERKEK KUAFÖRÜ, MANİSA ANATOMİK SAÇ KESİMİ, Dokulu Kırpma, Taper Fade, Manisa Berber">
+
+<meta name="google-site-verification" content="YjqJ2l2qJMYdsdYuYYJmbHO774GbmgAqY6u_5uQYESQ" />
+
+<style>
+:root {
+  --primary-orange: #ff5500;
+  --bg-black: #0f0f0f;
+  --bg-card: #181818;
+  --text-white: #ffffff;
+  --text-gray: #aaaaaa;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg-black);
+  color: var(--text-white);
+  line-height: 1.5;
+}
+
+/* HEADER */
+header{
+  position: sticky;
+  top: 0;
+  background: rgba(15, 15, 15, 0.95);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  border-bottom: 1px solid #222;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--primary-orange);
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero{
+  padding: 35px 20px 25px 20px;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), url("https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1000&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.stars {
+  color: var(--primary-orange);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.stars-text {
+  font-size: 13px;
+  color: var(--text-gray);
+  margin-bottom: 15px;
+}
+
+.location-tag {
+  color: var(--primary-orange);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero h1 span {
+  color: var(--primary-orange);
+}
+
+.hero p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+/* BUTONLAR GRID YAPISI */
+.btn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.btn-full {
+  grid-column: span 2;
+}
+
+.btn-orange {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--primary-orange);
+  color: #fff;
+  padding: 14px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.btn-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #25D366;
+  color: #fff;
+  padding: 14px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.btn-route {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #4285F4;
+  color: #fff;
+  padding: 14px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.btn-insta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #fff;
+  padding: 14px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* CANLI SAAT VE TAKVİM WIDGET */
+.live-bar {
+  background: #141414;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid var(--primary-orange);
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.live-status-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.status-open {
+  background: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+
+.status-closed {
+  background: rgba(220, 53, 69, 0.2);
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.live-datetime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.live-clock-text {
+  color: var(--primary-orange);
+  font-weight: bold;
+  font-size: 18px;
+  font-family: monospace;
+}
+
+/* SECTIONS */
+.section {
+  padding: 40px 20px;
+}
+
+.section-subtitle {
+  color: var(--primary-orange);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.section-title span {
+  color: var(--primary-orange);
+}
+
+/* HİZMETLER */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.service-card {
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #222;
+}
+
+.service-card .icon {
+  color: var(--primary-orange);
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.service-card p {
+  font-size: 13px;
+  color: var(--text-gray);
+}
+
+/* GALERİ - TAPER FADE & DOKULU KIRPMA SAÇ MODELLERİ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.gallery-tag {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  color: var(--primary-orange);
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 85, 0, 0.4);
+}
+
+/* ÇALIŞMA SAATLERİ */
+.hours-box {
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #222;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #282828;
+  font-size: 14px;
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+}
+
+.hours-row .time {
+  color: var(--primary-orange);
+  font-weight: bold;
+}
+
+.hours-row .closed {
+  color: #ff3333;
+  font-weight: bold;
+}
+
+/* MÜŞTERİ YORUMLARI */
+.review-card {
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  margin-bottom: 15px;
+}
+
+.review-card .quote {
+  color: var(--primary-orange);
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.review-card .stars {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-size: 13px;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background: #333;
+  color: var(--primary-orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* İLETİŞİM KARTLARI */
+.contact-item {
+  background: var(--bg-card);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+  border: 1px solid #222;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 85, 0, 0.1);
+  color: var(--primary-orange);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* HARİTA KONUM KUTUSU */
+.map-container {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--primary-orange);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.map-header {
+  background: #1e1e1e;
+  padding: 10px 15px;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--primary-orange);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* FOOTER */
+footer {
+  background: #080808;
+  padding: 30px 20px;
+  border-top: 1px solid #1a1a1a;
+  font-size: 13px;
+  color: var(--text-gray);
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.footer-nav a {
+  color: var(--text-gray);
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    ✂️ SALON <span>YILMAZ</span>
+  </div>
+  <div class="menu-icon">☰</div>
+</header>
+
+<section class="hero">
+  <div class="stars">★★★★★</div>
+  <div class="stars-text">Manisa'nın Güvenilir Erkek Kuaförü</div>
+  <div class="location-tag">ŞEHZADELER / MANİSA</div>
+  <h1>MANİSA <span>ANATOMİK SAÇ KESİMİ</span> & FADE</h1>
+  <p><strong>Manisa Salon Yılmaz Erkek Kuaförü</strong> olarak kafa ve yüz anatominize özel <strong>Anatomik Saç Kesimi</strong>, Taper Fade ve kişiye özel sakal tasarımı uyguluyoruz.</p>
+  
+  <div class="btn-grid">
+    <a class="btn-orange btn-full" href="tel:05075771022">📞 HEMEN ARA</a>
+    <a class="btn-whatsapp" href="https://wa.me/905075771022" target="_blank">💬 WHATSAPP</a>
+    <a class="btn-route" href="https://maps.google.com/maps?q=Arda+Mahallesi+3205.+Sokak+No:18/B,+Şehzadeler/Manisa&t=&z=15&ie=UTF8&iwloc=&output=embed" target="_blank">📍 YOL TARİFİ AL</a>
+    <a class="btn-insta btn-full" href="https://www.instagram.com/manisa_salon_yilmaz?igsh=MW1qcDZobDFnN3hocg==" target="_blank">📸 INSTAGRAM'DA İNCELEYİN</a>
+  </div>
+</section>
+
+<div class="live-bar">
+  <div id="live-status" class="live-status-badge status-open">🟢 ŞU AN AÇIK</div>
+  <div class="live-datetime">
+    <span>📅 <strong id="live-date">...</strong></span>
+    <span>⏰ <span id="live-clock" class="live-clock-text">--:--:--</span></span>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-subtitle">HİZMETLERİMİZ</div>
+  <h2 class="section-title">SENİN İÇİN <span>SUNDUĞUMUZ HİZMETLER</span></h2>
+
+  <div class="services-list">
+    <div class="service-card" style="border: 1px solid var(--primary-orange);">
+      <div class="icon">📐</div>
+      <h3>MANİSA ANATOMİK SAÇ KESİMİ</h3>
+      <p>Yüz kemik yapısı, kafa kemiği çıkıntıları ve saçın çıkış yönüne göre kişiye özel milimetrik anatomik kesim tasarımı.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">✂️</div>
+      <h3>DOKULU KIRPMA (TEXTURED CROP)</h3>
+      <p>Üst kısımlarda katlı doku ve önde modern küt çizgi ile saçlara hacimli ve estetik görünüm.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">⚡</div>
+      <h3>TAPER FADE & FADE KESİM</h3>
+      <p>Favori ve ense bölgesinde pürüzsüz geçiş sağlayan Taper Fade, Low Fade ve Mid Fade kesimleri.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">🧔</div>
+      <h3>SAKAL TASARIMI & HAT ÇİZİMİ</h3>
+      <p>Keskin hatlar, ustura düzeltmesi ve yüz tipinize uygun sakal şekillendirme.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">🌊</div>
+      <h3>DAMAT TIRAŞI ÖZEL PAKETİ</h3>
+      <p>Özel gününüz için sıcak havlu bakımı, cilt bakımı ve detaylı saç-sakal tasarımı.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: #121212;">
+  <div class="section-subtitle">SAÇ MODELLERİ</div>
+  <h2 class="section-title">ANATOMİK KESİM <span>& FADE KATALOĞU</span></h2>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80" alt="Dokulu Kırpma Kesim">
+      <span class="gallery-tag">Dokulu Kırpma (Crop)</span>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Anatomik Saç Kesimi">
+      <span class="gallery-tag">Anatomik Kesim</span>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Low Taper Fade">
+      <span class="gallery-tag">Low Taper Fade</span>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Sakal & Taper">
+      <span class="gallery-tag">Sakal & Taper</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-subtitle">HAKKIMIZDA</div>
+  <h2 class="section-title">MANİSA'DA <span>USTALIK VE GÜVEN</span></h2>
+  <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin-bottom: 25px;">
+    <strong>Manisa Salon Yılmaz Erkek Kuaförü</strong>, Şehzadeler'de erkek bakımı ve <strong>Manisa Anatomik Saç Kesimi</strong> alanında uzman kadrosuyla hizmet veriyor. Yüz yapınıza en uygun stili belirleyip modern trendleri ustalıkla uyguluyoruz.
+  </p>
+
+  <div class="hours-box">
+    <div style="display: flex; align-items: center; gap: 8px; color: var(--primary-orange); font-weight: bold; margin-bottom: 15px;">
+      ⏰ ÇALIŞMA SAATLERİ
+    </div>
+    <div class="hours-row">
+      <span>Pazartesi - Cumartesi</span>
+      <span class="time">08:30 - 21:00</span>
+    </div>
+    <div class="hours-row">
+      <span>Pazar</span>
+      <span class="closed">KAPALI</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: #121212;">
+  <h2 class="section-title">MÜŞTERİ <span>YORUMLARI</span></h2>
+
+  <div class="review-card">
+    <div class="quote">“</div>
+    <div class="stars">★★★★★</div>
+    <p>"Manisa'da dokulu kırpma (textured crop) ve anatomik kesimi kafa yapısına göre harika yapan bir kuaför. Taper Fade geçişleri de pürüzsüz."</p>
+    <div class="review-user">
+      <div class="avatar">A</div>
+      <div><strong>Ahmet Y.</strong></div>
+    </div>
+  </div>
+
+  <div class="review-card">
+    <div class="quote">“</div>
+    <div class="stars">★★★★★</div>
+    <p>"Manisa Salon Yılmaz Erkek Kuaförü işinin ehli. Saç ve sakal tasarımı için gözüm kapalı güveniyorum."</p>
+    <div class="review-user">
+      <div class="avatar">B</div>
+      <div><strong>Burak T.</strong></div>
+    </div>
+  </div>
+
+  <a href="https://g.page/r/CXHFFpmgJw2lEBM/review" target="_blank" class="btn-orange" style="margin-top: 15px; background: #4285F4; color: #fff;">
+    ⭐ GOOGLE'DA SİZ DE YORUM BIRAKIN
+  </a>
+</section>
+
+<section class="section">
+  <div class="section-subtitle">İLETİŞİM</div>
+  <h2 class="section-title">BİZE <span>ULAŞIN</span></h2>
+
+  <a href="tel:05075771022" class="contact-item">
+    <div class="contact-icon">📞</div>
+    <div>
+      <div style="font-size: 12px; color: var(--text-gray);">Telefon</div>
+      <div style="font-weight: bold;">0507 577 10 22</div>
+    </div>
+  </a>
+
+  <a href="https://wa.me/905075771022" class="contact-item">
+    <div class="contact-icon">💬</div>
+    <div>
+      <div style="font-size: 12px; color: var(--text-gray);">WhatsApp</div>
+      <div style="font-weight: bold;">Mesaj Gönder</div>
+    </div>
+  </a>
+
+  <a href="https://www.instagram.com/manisa_salon_yilmaz?igsh=MW1qcDZobDFnN3hocg==" target="_blank" class="contact-item">
+    <div class="contact-icon">📸</div>
+    <div>
+      <div style="font-size: 12px; color: var(--text-gray);">Instagram</div>
+      <div style="font-weight: bold;">@manisa_salon_yilmaz</div>
+    </div>
+  </a>
+
+  <div class="contact-item">
+    <div class="contact-icon">📍</div>
+    <div>
+      <div style="font-size: 12px; color: var(--text-gray);">Adres</div>
+      <div style="font-size: 13px; font-weight: bold;">Arda Mahallesi 3205. Sokak No:18/B, Şehzadeler / Manisa</div>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <div class="map-header">
+      📍 Salon Yılmaz Erkek Kuaförü Konumu (Manisa / Şehzadeler)
+    </div>
+    <iframe 
+      src="https://maps.google.com/?q=Arda+Mahallesi+3205.+Sokak+No:18/B,+Şehzadeler/Manisa" 
+      width="100%" 
+      height="260" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">✂️ MANİSA SALON <span>YILMAZ</span></div>
+  <p style="margin-top: 5px;">Manisa Salon Yılmaz Erkek Kuaförü — Manisa Anatomik Saç Kesimi, Dokulu Kırpma, Taper Fade & Sakal Tasarımı.</p>
+
+  <div class="footer-nav">
+    <a href="#">Anasayfa</a>
+    <a href="#">Hizmetler</a>
+    <a href="#">Saç Modelleri</a>
+    <a href="#">Hakkımızda</a>
+    <a href="#">Yorumlar</a>
+    <a href="#">İletİŞİm</a>
+  </div>
+
+  <div style="text-align: center; margin-top: 20px; font-size: 12px; color: #555;">
+    © 2026 Manisa Salon Yılmaz Erkek Kuaförü. Tüm hakları saklıdır.
+  </div>
+</footer>
+
+<script>
+function updateClockAndStatus() {
+  const now = new Date();
+  
+  // Canlı Saat (Saat:Dakika:Saniye)
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  document.getElementById('live-clock').textContent = `${hours}:${minutes}:${seconds}`;
+
+  // Canlı Tarih
+  const options = { day: 'numeric', month: 'long', weekday: 'long' };
+  document.getElementById('live-date').textContent = now.toLocaleDateString('tr-TR', options);
+
+  // Çalışma Durumu (Pzt-Cmt 08:30 - 21:00 arası Açık, Pazar Kapalı)
+  const day = now.getDay(); // 0 = Pazar
+  const currentMinutes = now.getHours() * 60 + now.getMinutes();
+  const openMinutes = 8 * 60 + 30; // 08:30
+  const closeMinutes = 21 * 60;    // 21:00
+
+  const statusBadge = document.getElementById('live-status');
+
+  if (day !== 0 && currentMinutes >= openMinutes && currentMinutes < closeMinutes) {
+    statusBadge.textContent = "🟢 ŞU AN AÇIK";
+    statusBadge.className = "live-status-badge status-open";
+  } else {
+    statusBadge.textContent = "🔴 ŞU AN KAPALI";
+    statusBadge.className = "live-status-badge status-closed";
+  }
+}
+
+setInterval(updateClockAndStatus, 1000);
+updateClockAndStatus();
+</script>
+
+</body>
+</html>
