@@ -1,22 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr"><!-- CANLI RANDEVU TAKVİMİ BAŞLANGICI -->
-<section id="randevu" style="padding: 40px 20px; background-color: #111111; text-align: center; color: white;">
-  <div style="max-width: 800px; margin: 0 auto;">
-    <h2 style="color: #d4af37; font-size: 28px; margin-bottom: 10px;">Online Randevu Al</h2>
-    <p style="color: #ccc; margin-bottom: 30px;">Aşağıdaki canlı takvimden boş saatleri seçerek anında randevunuzu oluşturabilirsiniz.</p>
-    
-    <!-- Google Takvim Modülü -->
-    <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0AAAAA?gv=true" style="width: 100%; height: 700px; border: none; border-radius: 12px; background: white;" frameborder="0"></iframe>
-
-    <!-- Doğrudan Link / Alternatif Buton -->
-    <div style="margin-top: 25px;">
-      <p style="color: #bbb; font-size: 14px; margin-bottom: 10px;">Takvim yüklenmezse veya harici sayfada açmak isterseniz:</p>
-      <a href="https://calendar.app.google/JupPLKpwqRyV4V5o6" target="_blank" style="display: inline-block; background-color: #d4af37; color: #000; padding: 12px 24px; border-radius: 6px; font-weight: bold; text-decoration: none;">Randevu Sayfasını Yeni Sekmede Aç</a>
-    </div>
-  </div>
-</section>
-<!-- CANLI RANDEVU TAKVİMİ SONU -->
-  
+<html lang="tr">
 <head> <link rel="icon" type="image/png" href="favicon.png"><link rel="manifest" href="manifest.json"><!-- iPhone ve iPad Ana Ekran İkonu -->
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   
@@ -414,4 +397,29 @@
 
       <div class="mt-14 grid gap-6 lg:grid-cols-2">
         <!-- Bilgiler Kartı -->
-        <div clas
+        <div class="card-lux p-8 flex flex-col justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-widest text-white/50">İletişim Bilgileri</p>
+            <h3 class="mt-2 font-display-tw text-3xl">SALON YILMAZ</h3>
+
+            <div class="mt-8 space-y-6">
+              <div>
+                <p class="mb-1 text-xs font-semibold uppercase tracking-widest text-white/50">Adres</p>
+                <a href="https://maps.google.com/?q=Salon+Yılmaz+Manisa" target="_blank" rel="noopener noreferrer"
+                   class="text-sm leading-relaxed text-white/80 hover-line">
+                  Arda Mahallesi 3205 Sokak, Manisa
+                </a>
+              </div>
+              <div>
+                <p class="mb-1 text-xs font-semibold uppercase tracking-widest text-white/50">Telefon / WhatsApp</p>
+                <a href="tel:+905075771022" class="text-sm text-white/80 hover-line">0507 577 10 22</a>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-white/50">Çalışma Saatleri</p>
+              <ul class="space-y-2" id="hours-list"></ul>
+            </div>
+          </div>
+
+          <div class="mt-10 flex flex
