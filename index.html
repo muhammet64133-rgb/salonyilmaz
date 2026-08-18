@@ -598,25 +598,7 @@
         `;
       });
     }
-
-    // WhatsApp Randevu Formu Gönderimi
-    const bookingForm = document.getElementById('booking-form');
-    if (bookingForm) {
-      bookingForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const date = document.getElementById('date').value;
-        const time = document.getElementById('time').value;
-        const service = document.getElementById('service').value;
-
-        const message = `Merhaba Salon Yılmaz, randevu almak istiyorum:%0A%0A` +
-                        `👤 *Ad Soyad:* ${encodeURIComponent(name)}%0A` +
-                        `📞 *Telefon:* ${encodeURIComponent(phone)}%0A` +
-                        `📅 *Tarih:* ${encodeURIComponent(date)}%0A` +
-                        `⏰ *Saat:* ${encodeURIComponent(time)}%0A` +
-                        `✂️ *Hizmet:* ${encodeURIComponent(service)}`;
-        <!-- RANDEVU BÖLÜMÜ BAŞLANGICI -->
+    <!-- RANDEVU BÖLÜMÜ BAŞLANGICI -->
 <section id="randevu" style="padding: 50px 20px; background-color: #111111; text-align: center; color: white;">
   <div style="max-width: 600px; margin: 0 auto; background: #1a1a1a; padding: 30px; border-radius: 15px; border: 1px solid #333;">
     
@@ -635,6 +617,25 @@
     <a href="https://wa.me/905075771022" target="_blank" style="display: inline-block; color: #25D366; text-decoration: none; font-weight: bold; font-size: 15px;">
       💬 WhatsApp İletişim Hattı
     </a>
+
+    // WhatsApp Randevu Formu Gönderimi
+    const bookingForm = document.getElementById('booking-form');
+    if (bookingForm) {
+      bookingForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const service = document.getElementById('service').value;
+
+        const message = `Merhaba Salon Yılmaz, randevu almak istiyorum:%0A%0A` +
+                        `👤 *Ad Soyad:* ${encodeURIComponent(name)}%0A` +
+                        `📞 *Telefon:* ${encodeURIComponent(phone)}%0A` +
+                        `📅 *Tarih:* ${encodeURIComponent(date)}%0A` +
+                        `⏰ *Saat:* ${encodeURIComponent(time)}%0A` +
+                        `✂️ *Hizmet:* ${encodeURIComponent(service)}`;
+        
 
   </div>
 </section>
