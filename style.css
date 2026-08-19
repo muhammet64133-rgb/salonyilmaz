@@ -5,7 +5,24 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #333;
+}body {
+  /* Resmin arkasındaki ana koyu renk */
+  background-color: #0d1117; 
+
+  /* Siyah karartma katmanı (%85 şeffaf) + Arka plan resmi */
+  background-image: 
+    linear-gradient(rgba(13, 17, 23, 0.85), rgba(13, 17, 23, 0.85)), 
+    url('assets/bg.jpg'); /* GitHub'daki resim yolunuz */
+
+  /* Arka planın ekranı kaplaması ve kaymaması için */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  
+  color: #ffffff; /* Yazıların belirgin kalması için */
 }
+
 
 header {
     background-color: #111;
