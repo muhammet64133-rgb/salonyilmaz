@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- Favicon & PWA / Mobil Ana Ekran -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#08080a">
+  <meta name="msapplication-TileColor" content="#08080a">
+  <meta name="msapplication-TileImage" content="favicon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Salon Yılmaz">
+  <meta name="application-name" content="Salon Yılmaz">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Temel SEO - Manisa Odaklı -->
+  <title>Salon Yılmaz | Manisa Erkek Kuaförü &amp; Saç Kesimi – Tarzını Yükselt</title>
+  <meta name="description" content="Salon Yılmaz Manisa erkek kuaförü. Anatomik saç kesimi, sakal tasarımı, fade ve bakım. Arda Mahallesi 3205 Sokak. Randevu: 0507 577 10 22. Pzt–Cmt 09:00–21:00.">
+  <meta name="keywords" content="Manisa kuaför, Manisa berber, Manisa erkek kuaförü, Manisa saç kesimi, Manisa sakal tasarımı, Manisa fade, Manisa anatomik saç kesimi, Salon Yılmaz Manisa, Manisa randevu kuaför, Arda Mahallesi kuaför, Manisa erkek bakım">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Salon Yılmaz Manisa">
+  <meta name="language" content="Turkish">
+  <link rel="canonical" href="https://salonyilmaz.com.tr/">
+
+  <!-- Yerel SEO / Coğrafi -->
+  <meta name="geo.region" content="TR-45">
+  <meta name="geo.placename" content="Manisa">
+  <meta name="geo.position" content="38.6191;27.4289">
+  <meta name="ICBM" content="38.6191, 27.4289">
+  <meta name="geo.country" content="TR">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="Salon Yılmaz Manisa">
+  <meta property="og:url" content="https://salonyilmaz.com.tr/">
+  <meta property="og:title" content="Salon Yılmaz | Manisa Erkek Kuaförü – Tarzını Yükselt">
+  <meta property="og:description" content="Manisa'da anatomik saç kesimi, sakal tasarımı ve erkek bakım. Arda Mahallesi. Hemen randevu alın: 0507 577 10 22.">
+  <meta property="og:image" content="https://salonyilmaz.com.tr/favicon.png">
+  <meta property="og:image:alt" content="Salon Yılmaz Manisa Erkek Kuaförü">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Salon Yılmaz | Manisa Erkek Kuaförü">
+  <meta name="twitter:description" content="Manisa anatomik saç kesimi ve sakal tasarımı. Randevu: 0507 577 10 22.">
+  <meta name="twitter:image" content="https://salonyilmaz.com.tr/favicon.png">
+
+  <!-- Schema.org LocalBusiness / BarberShop -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "@id": "https://salonyilmaz.com.tr/#business",
+    "name": "Salon Yılmaz",
+    "alternateName": ["Salon Yılmaz Manisa", "Salon Yılmaz Erkek Kuaförü"],
+    "description": "Manisa'da profesyonel erkek kuaförü. Anatomik saç kesimi, sakal tasarımı, fade ve kişisel bakım hizmetleri.",
+    "url": "https://salonyilmaz.com.tr/",
+    "image": "https://salonyilmaz.com.tr/favicon.png",
+    "logo": "https://salonyilmaz.com.tr/favicon.png",
+    "telephone": "+905075771022",
+    "priceRange": "₺₺",
+    "currenciesAccepted": "TRY",
+    "paymentAccepted": "Cash, Credit Card",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Arda Mahallesi 3205 Sokak 18/B",
+      "addressLocality": "Manisa",
+      "addressRegion": "Manisa",
+      "postalCode": "45000",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.6191,
+      "longitude": 27.4289
+    },
+    "hasMap": "https://maps.google.com/?q=Salon+Yılmaz+Manisa",
+    "areaServed": {
+      "@type": "City",
+      "name": "Manisa"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "21:00"
+      }
+    ],
+    "sameAs": [
+      "https://wa.me/905075771022"
+    ],
+    "makesOffer": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Saç Kesimi", "areaServed": "Manisa"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sakal Tasarımı", "areaServed": "Manisa"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fade Kesim", "areaServed": "Manisa"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Saç ve Sakal Bakımı", "areaServed": "Manisa"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Saç Boyama", "areaServed": "Manisa"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cilt Bakımı", "areaServed": "Manisa"}}
+    ]
+  }
+  </script>
+
+  <!-- Breadcrumb schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://salonyilmaz.com.tr/"},
+      {"@type": "ListItem", "position": 2, "name": "Manisa Erkek Kuaförü", "item": "https://salonyilmaz.com.tr/#hizmetler"}
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: '#a3ff12',
+            'brand-dark': '#0d0d0d',
+            'brand-card': '#141416',
+            'brand-border': '#222226'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #08080a;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+    }
+    .font-impact {
+      font-family: 'Montserrat', sans-serif;
+      font-style: italic;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 80% 30%, rgba(163, 255, 18, 0.18) 0%, rgba(0, 0, 0, 0) 60%);
+    }
+    .card-glow:hover {
+      border-color: #a3ff12;
+      box-shadow: 0 0 25px -5px rgba(163, 255, 18, 0.25);
+    }
+    .btn-neon {
+      background-color: #a3ff12;
+      color: #000000;
+      font-weight: 700;
+      box-shadow: 0 0 20px rgba(163, 255, 18, 0.4);
+      transition: all 0.3s ease;
+    }
+    .btn-neon:hover {
+      box-shadow: 0 0 30px rgba(163, 255, 18, 0.7);
+      transform: translateY(-2px);
+    }
+    .field {
+      width: 100%;
+      background: #141416;
+      border: 1px solid #222226;
+      border-radius: 0.75rem;
+      padding: 0.85rem 1rem;
+      color: #fff;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+    .field:focus { outline: none; border-color: #a3ff12; }
+    .field::placeholder { color: #666; }
+    #mobile-menu {
+      max-height: 0; overflow: hidden; opacity: 0;
+      transition: max-height 0.35s ease, opacity 0.3s ease;
+    }
+    #mobile-menu.open { max-height: 420px; opacity: 1; }
+    .gallery-item { overflow: hidden; border-radius: 0.75rem; border: 1px solid #222226; }
+    .gallery-item img { transition: transform 0.5s ease; }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .star { fill: #a3ff12; width: 14px; height: 14px; }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand selection:text-black">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-[#08080a]/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#anasayfa" class="flex items-center gap-3 group">
+        <div class="text-brand">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="6" cy="6" r="3"></circle>
+            <circle cx="6" cy="18" r="3"></circle>
+            <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+            <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+            <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <div>
+          <span class="font-impact text-2xl tracking-wider text-white block leading-none">SALON YILMAZ</span>
+          <span class="text-[10px] tracking-[0.2em] text-white/50 uppercase font-semibold">Erkek Kuaförü</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-white/80">
+        <a href="#anasayfa" class="text-brand border-b-2 border-brand pb-1">Ana Sayfa</a>
+        <a href="#hakkimizda" class="hover:text-brand transition-colors">Hakkımızda</a>
+        <a href="#hizmetler" class="hover:text-brand transition-colors">Hizmetler</a>
+        <a href="#galeri" class="hover:text-brand transition-colors">Galeri</a>
+        <a href="#yorumlar" class="hover:text-brand transition-colors">Yorumlar</a>
+        <a href="#iletisim" class="hover:text-brand transition-colors">İletişim</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#randevu" class="hidden sm:flex btn-neon rounded-full px-6 py-2.5 text-xs uppercase tracking-wider font-extrabold items-center gap-2">
+          <span>Randevu Al</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+        </a>
+        <button id="menu-btn" class="md:hidden flex h-10 w-10 items-center justify-center rounded-lg border border-white/15" aria-label="Menü">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden border-t border-white/5 bg-[#08080a]">
+      <div class="flex flex-col px-4 py-3 gap-1 text-sm font-bold uppercase tracking-wider">
+        <a href="#anasayfa" class="py-2.5 text-brand">Ana Sayfa</a>
+        <a href="#hakkimizda" class="py-2.5 text-white/70">Hakkımızda</a>
+        <a href="#hizmetler" class="py-2.5 text-white/70">Hizmetler</a>
+        <a href="#galeri" class="py-2.5 text-white/70">Galeri</a>
+        <a href="#yorumlar" class="py-2.5 text-white/70">Yorumlar</a>
+        <a href="#iletisim" class="py-2.5 text-white/70">İletişim</a>
+        <a href="#randevu" class="mt-2 btn-neon rounded-full py-3 text-center text-xs">Randevu Al</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="anasayfa" class="relative min-h-[85vh] flex items-center overflow-hidden hero-glow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full grid md:grid-cols-12 items-center gap-8">
+      <div class="md:col-span-7 z-10">
+        <div class="inline-flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-widest mb-4">
+          <span class="text-lg">/</span> YENİ TARZ. YENİ SEN.
+        </div>
+        <h1 class="font-impact text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight mb-4">
+          <span class="text-white block">TARZINI</span>
+          <span class="text-brand block">YÜKSELT</span>
+        </h1>
+        <p class="text-white/70 text-base sm:text-lg max-w-xl font-medium mb-8">
+          Erkeklerin yeni nesil <span class="text-brand font-semibold">duruşu.</span> Özenli bakım, keskin stil.
+        </p>
+        <div class="flex flex-wrap items-center gap-4 mb-12">
+          <a href="#randevu" class="btn-neon px-8 py-4 rounded-full text-sm font-black uppercase tracking-wider flex items-center gap-3">
+            Randevu Al
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+          <a href="#galeri" class="bg-white/5 hover:bg-white/10 border border-white/10 px-6 py-4 rounded-full text-sm font-bold uppercase tracking-wider text-white flex items-center gap-2 transition">
+            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+            Galeriyi Keşfet
+          </a>
+        </div>
+        <div class="grid grid-cols-3 gap-4 border-t border-white/10 pt-6 max-w-lg">
+          <div class="flex items-center gap-3">
+            <div class="text-brand">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+            </div>
+            <div>
+              <div class="font-impact text-xl text-white">5+</div>
+              <div class="text-[10px] text-white/50 uppercase font-bold tracking-wider">Yıllık Deneyim</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-brand">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+            </div>
+            <div>
+              <div class="font-impact text-xl text-white">2K+</div>
+              <div class="text-[10px] text-white/50 uppercase font-bold tracking-wider">Mutlu Müşteri</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-brand">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            </div>
+            <div>
+              <div class="font-impact text-xl text-white">%100</div>
+              <div class="text-[10px] text-white/50 uppercase font-bold tracking-wider">Gerçek Fark</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-5 relative flex justify-center">
+        <div class="absolute inset-0 bg-brand/20 blur-3xl rounded-full scale-75 pointer-events-none"></div>
+        <img
+          src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1000&auto=format&fit=crop"
+          alt="Salon Yılmaz Model"
+          class="relative z-10 w-full max-w-md object-cover rounded-2xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition duration-500"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- HİZMETLER -->
+  <section id="hizmetler" class="py-16 bg-[#0c0c0f] border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div class="bg-brand-card p-6 rounded-xl border border-brand-border flex flex-col justify-between">
+          <div>
+            <span class="text-brand font-bold text-xs uppercase tracking-widest block mb-2">Hizmetlerimiz</span>
+            <h2 class="font-impact text-2xl text-white uppercase leading-tight">SADECE BİR KESİM DEĞİL, BİR DÖNÜŞÜM.</h2>
+          </div>
+          <div class="mt-6 flex justify-between items-center text-brand">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            <svg class="w-8 h-8 opacity-40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+          </div>
+        </div>
+        <div class="bg-brand-card p-6 rounded-xl border border-brand-border card-glow transition text-center flex flex-col items-center justify-center">
+          <div class="text-brand mb-4">
+            <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+          </div>
+          <h3 class="font-impact text-lg text-white mb-1">SAÇ KESİM</h3>
+          <p class="text-white/50 text-xs font-medium">Keskin stiller, mükemmel sonuçlar.</p>
+        </div>
+        <div class="bg-brand-card p-6 rounded-xl border border-brand-border card-glow transition text-center flex flex-col items-center justify-center">
+          <div class="text-brand mb-4">
+            <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+          </div>
+          <h3 class="font-impact text-lg text-white mb-1">SAKAL & TRAŞ</h3>
+          <p class="text-white/50 text-xs font-medium">Tıraş, şekillendirme ve bakım.</p>
+        </div>
+        <div class="bg-brand-card p-6 rounded-xl border border-brand-border card-glow transition text-center flex flex-col items-center justify-center">
+          <div class="text-brand mb-4">
+            <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          </div>
+          <h3 class="font-impact text-lg text-white mb-1">SAÇ & SAKAL BAKIM</h3>
+          <p class="text-white/50 text-xs font-medium">Saç, cilt ve sakal için özenli bakım.</p>
+        </div>
+        <div class="bg-brand-card p-6 rounded-xl border border-brand-border card-glow transition text-center flex flex-col items-center justify-center">
+          <div class="text-brand mb-4">
+            <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M7 21a4 4 0 01-4-4c0-1.48.8-2.75 2-3.45V5a2 2 0 012-2h4a2 2 0 012 2v9.55c1.2.7 2 1.97 2 3.45a4 4 0 01-4 4H7z"></path></svg>
+          </div>
+          <h3 class="font-impact text-lg text-white mb-1">RENKLENDİRME</h3>
+          <p class="text-white/50 text-xs font-medium">Dikkat çekici detaylar.</p>
+        </div>
+      </div>
+
+      <!-- Extra services row -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+        <div class="bg-brand-card p-5 rounded-xl border border-brand-border card-glow transition">
+          <h3 class="font-impact text-base text-white mb-1">CİLT BAKIMI</h3>
+          <p class="text-white/50 text-xs">Arındırma, nemlendirme ve canlandırma.</p>
+        </div>
+        <div class="bg-brand-card p-5 rounded-xl border border-brand-border card-glow transition">
+          <h3 class="font-impact text-base text-white mb-1">KALICI SAÇ</h3>
+          <p class="text-white/50 text-xs">İstediğin formu uzun süre koruyan şekillendirme.</p>
+        </div>
+        <div class="bg-brand-card p-5 rounded-xl border border-brand-border card-glow transition">
+          <h3 class="font-impact text-base text-white mb-1">TOPİK</h3>
+          <p class="text-white/50 text-xs">Doğal görünüm sağlayan profesyonel uygulamalar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HAKKIMIZDA -->
+  <section id="hakkimizda" class="py-20 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-brand font-bold text-xs uppercase tracking-widest block mb-3">Hakkımızda</span>
+        <h2 class="font-impact text-4xl sm:text-5xl text-white leading-none mb-6">
+          STİL<br><span class="text-brand">& DENEYİM</span>
+        </h2>
+        <p class="text-white/60 leading-relaxed mb-8 max-w-md">
+          Manisa’da hizmet veren Salon Yılmaz’da her kesim bir ifade. Geleneksel ustalığı modern tekniklerle birleştiriyoruz. Hijyenik ortam, özenli ekip ve gerçek ilgi burada.
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3 text-sm text-white/70">
+            <span class="w-2 h-2 rounded-full bg-brand"></span> Yüz hatlarına özel anatomik kesim
+          </li>
+          <li class="flex items-center gap-3 text-sm text-white/70">
+            <span class="w-2 h-2 rounded-full bg-brand"></span> Hijyenik profesyonel ortam
+          </li>
+          <li class="flex items-center gap-3 text-sm text-white/70">
+            <span class="w-2 h-2 rounded-full bg-brand"></span> Klasik ustura traşı
+          </li>
+          <li class="flex items-center gap-3 text-sm text-white/70">
+            <span class="w-2 h-2 rounded-full bg-brand"></span> Deneyimli ve özenli ekip
+          </li>
+        </ul>
+      </div>
+      <div class="relative">
+        <div class="absolute inset-0 bg-brand/10 blur-3xl rounded-full pointer-events-none"></div>
+        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=900&q=80"
+             alt="Salon ortamı" class="relative z-10 w-full rounded-2xl border border-white/10 object-cover aspect-[4/3]">
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERİ -->
+  <section id="galeri" class="py-20 bg-[#0c0c0f] border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-brand font-bold text-xs uppercase tracking-widest block mb-3">Galeri</span>
+        <h2 class="font-impact text-4xl sm:text-5xl text-white">İŞLERİMİZ</h2>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <div class="gallery-item aspect-square">
+          <img src="https://lh3.googleusercontent.com/grass-cs/ACvplmNc3NbKoM3XG4Dgz4DzjyZq5nP1eHG7JrIF1Z5rydwzyvGL_SlWx2tZdXfNlW5MoHWQgaswAJReIHOzV95ieK9ccX6HYtj72Yn_Fzhdra4vh_0RLi4EvigQx0HJv3IHv8yUbTuTOT5OTlU=s1532-w812-h1532-rw" alt="Kesim" class="h-full w-full object-cover" loading="lazy">
+        </div>
+        <div class="gallery-item aspect-square">
+          <img src="https://lh3.googleusercontent.com/grass-cs/ACvplmNXOLCv68R3MislF06bsfQ9p2OdRuQLOTLzIvYeAGYbARcBrWw3ClcshHwh8LhQKXke_r0vrezQNZgMussamQ4tXc5ApsgyWkMd96bfpT_JIkSkPo8OOZp4HSF2hA_HT0pa4dVtGc1vcF14=s1532-w812-h1532-rw" alt="Sakal" class="h-full w-full object-cover" loading="lazy">
+        </div>
+        <div class="gallery-item aspect-square">
+          <img src="https://lh3.googleusercontent.com/grass-cs/ACvplmPhvf0ixnoBdrtwO8GdgmpYt4LvFo-ro6LbzhKXtQMA-fxbFzH5y_jvLDNQ-rXrRSL9FBPOn3UTeBaNV6hkp9Xh8ac-otBDrsIIv5Qvd1dk3HeOUqx3PEVN4hHFyibS3mSubHk=s1532-w812-h1532-rw" alt="Bakım" class="h-full w-full object-cover" loading="lazy">
+        </div>
+        <div class="gallery-item aspect-square">
+          <img src="https://lh3.googleusercontent.com/grass-cs/ACvplmMZJtysKzCeVyfImzNKFD834OxSgz0JfMIC_rSdKk7RFSpOjjkgCtAMELM3m7mSZzR1BHxLWz8Gg72tyA8RSzjZOuD2ruk895hWT5EXxZbqi4Z3CLpcA4mRFkVuYePBdGlGAMPRjH27Cz9H=s1532-w812-h1532-rw" alt="Salon" class="h-full w-full object-cover" loading="lazy">
+        </div>
+        <div class="gallery-item aspect-square col-span-2 sm:col-span-1">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnd0bzf0T_1Kht_9LT0Os9WmTxkA1TOVVkooENUSTTElZHkx5ieoAzZgDrZS2SQ2mbjX_hooIuiASlch64JOXNhZxb0N5paRhgHxj9cy_PfxM2V5Ykg934T_3Ax3yolrH7U1B-l9vEyKLDm=s1532-w812-h1532-rw" alt="Stil" class="h-full w-full object-cover" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YORUMLAR -->
+  <section id="yorumlar" class="py-20 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-brand font-bold text-xs uppercase tracking-widest block mb-3">Yorumlar</span>
+        <h2 class="font-impact text-4xl sm:text-5xl text-white">MÜŞTERİ YORUMLARI</h2>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-3" id="reviews-grid"></div>
+      <div class="mt-10 text-center">
+        <a href="https://maps.google.com/?q=Salon+Yılmaz+Manisa" target="_blank" rel="noopener" class="text-sm text-brand hover:underline font-semibold">Google’da tüm yorumlar →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM -->
+  <section id="iletisim" class="py-20 bg-[#0c0c0f] border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-brand font-bold text-xs uppercase tracking-widest block mb-3">İletişim</span>
+        <h2 class="font-impact text-4xl sm:text-5xl text-white">BİZE ULAŞ</h2>
+      </div>
+      <div class="grid gap-5 lg:grid-cols-2">
+        <div class="bg-brand-card p-8 rounded-xl border border-brand-border">
+          <h3 class="font-impact text-2xl text-white">SALON YILMAZ</h3>
+          <p class="text-white/40 text-sm mt-1 uppercase tracking-wider">Manisa</p>
+          <div class="mt-8 space-y-5">
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-white/40 mb-1 font-bold">Adres</p>
+              <a href="https://maps.google.com/?q=Salon+Yılmaz+Manisa" target="_blank" rel="noopener" class="text-sm text-white/75 hover:text-brand transition">Arda Mahallesi 3205 Sokak, Manisa</a>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-white/40 mb-1 font-bold">Telefon / WhatsApp</p>
+              <a href="tel:+905075771022" class="text-sm text-white/75 hover:text-brand transition">0507 577 10 22</a>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold">Çalışma Saatleri</p>
+              <ul class="space-y-1.5 text-sm text-white/60">
+                <li class="flex justify-between"><span>Pazartesi – Cumartesi</span><span class="text-brand font-semibold">09:00 – 21:00</span></li>
+                <li class="flex justify-between"><span>Pazar</span><span class="text-brand font-semibold">Kapalı</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="https://wa.me/905075771022" target="_blank" rel="noopener" class="btn-neon flex-1 rounded-full py-3 text-center text-xs uppercase tracking-wider font-black">WhatsApp</a>
+            <a href="https://maps.google.com/?q=Salon+Yılmaz+Manisa" target="_blank" rel="noopener" class="flex-1 rounded-full py-3 text-center text-xs uppercase tracking-wider font-bold border border-white/15 hover:border-brand hover:text-brand transition">Yol Tarifi</a>
+          </div>
+        </div>
+        <div class="bg-brand-card rounded-xl border border-brand-border overflow-hidden min-h-[360px]">
+          <iframe title="Salon Yılmaz konum" src="https://www.google.com/maps?q=Manisa,Türkiye&output=embed" class="h-full w-full min-h-[360px] grayscale opacity-80" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RANDEVU -->
+  <section id="randevu" class="py-20 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Banner -->
+      <div class="bg-brand-card p-8 rounded-xl border border-brand-border flex flex-col sm:flex-row items-center justify-between gap-6 mb-10">
+        <div>
+          <span class="text-brand font-bold text-xs uppercase tracking-widest block mb-1">HAZIR MISIN?</span>
+          <h3 class="font-impact text-2xl text-white">YERİNİ AYIRT, TARZINI YAKALA.</h3>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="https://calendar.app.google/JupPLKpwqRyV4V5o6" target="_blank" rel="noopener" class="btn-neon px-8 py-3 rounded-full text-xs font-black uppercase tracking-wider flex items-center gap-2">
+            <span>RANDEVU AL</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+          </a>
+          <div class="hidden lg:flex items-center gap-3 border-l border-white/10 pl-6">
+            <div class="text-brand">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4"></path></svg>
+            </div>
+            <div>
+              <div class="font-impact text-lg text-white">SALON YILMAZ</div>
+              <div class="text-[10px] text-white/50 font-bold uppercase tracking-widest">KESKİN. MODERN. SEN.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="max-w-lg mx-auto">
+        <p class="text-center text-white/50 text-sm mb-6">Veya formu doldur, anında WhatsApp’tan bize ulaşsın.</p>
+        <form id="booking-form" class="bg-brand-card p-7 rounded-xl border border-brand-border space-y-4">
+          <div>
+            <label class="mb-1 block text-xs font-bold uppercase tracking-wider text-white/40" for="name">Ad Soyad</label>
+            <input type="text" id="name" required placeholder="Adınız Soyadınız" class="field" />
+          </div>
+          <div>
+            <label class="mb-1 block text-xs font-bold uppercase tracking-wider text-white/40" for="phone">Telefon</label>
+            <input type="tel" id="phone" required placeholder="05xx xxx xx xx" class="field" />
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="mb-1 block text-xs font-bold uppercase tracking-wider text-white/40" for="date">Tarih</label>
+              <input type="date" id="date" required class="field" />
+            </div>
+            <div>
+              <label class="mb-1 block text-xs font-bold uppercase tracking-wider text-white/40" for="time">Saat</label>
+              <input type="time" id="time" required class="field" />
+            </div>
+          </div>
+          <div>
+            <label class="mb-1 block text-xs font-bold uppercase tracking-wider text-white/40" for="service">Hizmet</label>
+            <select id="service" required class="field">
+              <option value="Saç Kesimi">Saç Kesimi</option>
+              <option value="Sakal Tasarımı">Sakal Tasarımı</option>
+              <option value="Saç & Sakal Bakımı">Saç & Sakal Bakımı</option>
+              <option value="Saç Boyama">Saç Boyama</option>
+              <option value="Cilt Bakımı">Cilt Bakımı</option>
+              <option value="Kalıcı Saç">Kalıcı Saç</option>
+              <option value="Topik">Topik</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-neon w-full rounded-full py-3.5 text-xs uppercase tracking-wider font-black mt-2">
+            WhatsApp ile Randevu Oluştur
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#050507] border-t border-white/5 py-8 text-center text-white/40 text-xs">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="font-impact text-sm text-white mb-2">SALON <span class="text-brand">YILMAZ</span></p>
+      <p>© 2026 Salon Yılmaz – Manisa Erkek Kuaförü · Saç Kesimi · Sakal Tasarımı</p>
+      <p class="mt-1 text-white/25">Arda Mahallesi 3205 Sokak, Manisa · 0507 577 10 22</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+      mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+    }
+
+    // Reviews
+    const reviews = [
+      { name: "Mert K.", text: "Atmosfer efsane, kesim nokta atışı. Yıllardır vazgeçemediğim tek yer.", rating: 5 },
+      { name: "Burak T.", text: "Sakal tasarımı ve fade konusunda Manisa’da rakipsiz. Kesinlikle tavsiye.", rating: 5 },
+      { name: "Ali R.", text: "Hijyen, ilgi ve sonuç 10/10. Cilt bakımı da süperdi.", rating: 5 }
+    ];
+    const grid = document.getElementById('reviews-grid');
+    const star = '<svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>';
+    reviews.forEach(r => {
+      grid.innerHTML += '<div class="bg-brand-card p-6 rounded-xl border border-brand-border card-glow transition flex flex-col justify-between"><p class="text-sm text-white/60 leading-relaxed">"' + r.text + '"</p><div class="mt-5 flex items-center justify-between border-t border-white/5 pt-4"><span class="font-impact text-sm text-white">' + r.name + '</span><div class="flex gap-0.5">' + star.repeat(r.rating) + '</div></div></div>';
+    });
+
+    // WhatsApp form
+    document.getElementById('booking-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+      const service = document.getElementById('service').value;
+      const msg = 'Merhaba Salon Yılmaz, randevu almak istiyorum:%0A%0A' +
+        '👤 *Ad Soyad:* ' + encodeURIComponent(name) + '%0A' +
+        '📞 *Telefon:* ' + encodeURIComponent(phone) + '%0A' +
+        '📅 *Tarih:* ' + encodeURIComponent(date) + '%0A' +
+        '⏰ *Saat:* ' + encodeURIComponent(time) + '%0A' +
+        '✂️ *Hizmet:* ' + encodeURIComponent(service);
+      window.open('https://wa.me/905075771022?text=' + msg, '_blank');
+    });
+  </script>
+</body>
+</html>
