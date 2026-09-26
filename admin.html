@@ -26,13 +26,34 @@
         <span class="text-brand font-black text-xl tracking-wider uppercase">Salon Yılmaz</span>
         <span class="text-xs bg-brand/10 text-brand px-2.5 py-1 rounded-full font-bold">Yönetim Paneli</span>
       </div>
-      <button id="save-all-btn" class="bg-brand text-black font-extrabold px-6 py-2 rounded-full text-xs uppercase tracking-wider hover:shadow-[0_0_20px_rgba(163,255,18,0.5)] transition">
-        Değişiklikleri Kaydet
+      <button id="save-github-btn" type="button" class="bg-brand text-black font-extrabold px-6 py-2 rounded-full text-xs uppercase tracking-wider hover:shadow-[0_0_20px_rgba(163,255,18,0.5)] transition cursor-pointer flex items-center gap-2">
+        💾 GitHub'a Doğrudan Kaydet
       </button>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 mt-8 space-y-8">
+
+    <!-- GİTHUB BAĞLANTI AYARLARI (İşte Aradığınız Kutu Burada!) -->
+    <section class="bg-brand-card border border-brand/30 rounded-xl p-6">
+      <h2 class="text-lg font-bold text-brand uppercase mb-2">🔑 GitHub Otomatik Kayıt Ayarları</h2>
+      <p class="text-xs text-white/60 mb-4">Bu alanları 1 defa doldurduğunuzda tarayıcınız hatırlar.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <label class="block text-xs uppercase text-white/60 mb-1">GitHub Kullanıcı Adınız</label>
+          <input type="text" id="gh-username" placeholder="Örn: ahmet123" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm focus:border-brand outline-none">
+        </div>
+        <div>
+          <label class="block text-xs uppercase text-white/60 mb-1">Repo (Proje) Adı</label>
+          <input type="text" id="gh-repo" placeholder="Örn: salon-yilmaz" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm focus:border-brand outline-none">
+        </div>
+        <div>
+          <label class="block text-xs uppercase text-white/60 mb-1">Personal Access Token</label>
+          <input type="password" id="gh-token" placeholder="ghp_xxxxxxxxxxxx" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm focus:border-brand outline-none">
+        </div>
+      </div>
+    </section>
 
     <!-- HERO BÖLÜMÜ -->
     <section class="bg-brand-card border border-brand-border rounded-xl p-6">
@@ -42,25 +63,26 @@
         <div>
           <label class="block text-xs uppercase text-white/60 mb-2">Model Resmi Değiştir</label>
           <div class="flex items-center gap-4">
-            <img id="hero-preview" src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1000&auto=format&fit=crop" class="w-20 h-20 object-cover rounded-lg border border-brand-border">
+            <img id="hero-preview" src="" class="w-20 h-20 object-cover rounded-lg border border-brand-border bg-black/50">
             <input type="file" id="hero-file-input" accept="image/*" class="text-xs text-white/70 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-brand file:text-black hover:file:bg-brand/80 cursor-pointer">
           </div>
+          <p id="hero-upload-status" class="text-xs text-brand mt-2 hidden">Resim yükleniyor...</p>
         </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div>
             <label class="block text-xs uppercase text-white/60 mb-1">Başlık Satır 1</label>
-            <input type="text" id="hero-title-1" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm focus:border-brand outline-none" value="TARZINI">
+            <input type="text" id="hero-title-1" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm focus:border-brand outline-none">
           </div>
           <div>
             <label class="block text-xs uppercase text-white/60 mb-1">Başlık Satır 2 (Yeşil)</label>
-            <input type="text" id="hero-title-2" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm focus:border-brand outline-none" value="YÜKSELT">
+            <input type="text" id="hero-title-2" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm focus:border-brand outline-none">
           </div>
         </div>
 
         <div>
           <label class="block text-xs uppercase text-white/60 mb-1">Açıklama Metni</label>
-          <textarea id="hero-description" rows="2" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm focus:border-brand outline-none">Erkeklerin yeni nesil duruşu. Özenli bakım, keskin stil.</textarea>
+          <textarea id="hero-description" rows="2" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm focus:border-brand outline-none"></textarea>
         </div>
       </div>
     </section>
@@ -68,9 +90,7 @@
     <!-- HİZMETLER BÖLÜMÜ -->
     <section class="bg-brand-card border border-brand-border rounded-xl p-6">
       <h2 class="text-lg font-bold text-brand uppercase mb-4 border-b border-white/5 pb-2">Hizmet Kartları</h2>
-      <div id="services-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!-- JS ile Doldurulacak -->
-      </div>
+      <div id="services-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
     </section>
 
     <!-- GALERİ RESİMLERİ -->
@@ -82,10 +102,8 @@
           <input type="file" id="gallery-file-input" accept="image/*" class="hidden" multiple>
         </label>
       </div>
-
-      <div id="gallery-preview-container" class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <!-- JS ile Doldurulacak -->
-      </div>
+      <p id="gallery-upload-status" class="text-xs text-brand mb-3 hidden">Resimler yükleniyor...</p>
+      <div id="gallery-preview-container" class="grid grid-cols-2 sm:grid-cols-4 gap-4"></div>
     </section>
 
     <!-- İLETİŞİM BÖLÜMÜ -->
@@ -109,6 +127,8 @@
 
   </main>
 
+  <script src="data.js"></script>
   <script src="admin.js"></script>
 </body>
-</html>
+  </html>
+                          
