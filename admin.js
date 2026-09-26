@@ -11,7 +11,7 @@ const defaultData = {
 
 let siteData = JSON.parse(localStorage.getItem('salonYilmazData')) || defaultData;
 
-// Sayfa yüklendiğinde mevcut bilgileri doldur
+// Sayfa Yüklendiğinde
 function initPanel() {
   document.getElementById('hero-title-1').value = siteData.hero.title1;
   document.getElementById('hero-title-2').value = siteData.hero.title2;
@@ -21,32 +21,63 @@ function initPanel() {
   renderGallery();
 }
 
-// Resim dosyasını Base64 formatına çeviren yardımcı fonksiyon
-function fileToBase64(file) {
-  return new Promise((resolve, reject) => {
+/**
+ * Resimleri Kaliteyi Korumak Kaydıyla Otomatik Boyutlandıran ve Sıkıştıran Fonksiyon
+ */
+function compressAndResizeImage(file, maxWidth = 1000, quality = 0.75) {
+  return new Promise((resolve) => {
     const reader = new FileReader();
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = error => reject(error);
     reader.readAsDataURL(file);
+    reader.onload = (event) => {
+      const img = new Image();
+      img.src = event.target.result;
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        let width = img.width;
+        let height = img.height;
+
+        // Boyut büyükse oranlı olarak küçült
+        if (width > maxWidth) {
+          height = Math.round((height * maxWidth) / width);
+          width = maxWidth;
+        }
+
+        canvas.width = width;
+        canvas.height = height;
+
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, width, height);
+
+        // Resmi JPEG formatında sıkıştırıp döndür
+        const compressedBase64 = canvas.toDataURL('image/jpeg', quality);
+        resolve(compressedBase64);
+      };
+    };
   });
 }
 
-// Hero Modeli Resmi Seçildiğinde
+// Hero Model Resmi Seçildiğinde
 document.getElementById('hero-file-input').addEventListener('change', async (e) => {
   const file = e.target.files[0];
-  if (file) {
-    const base64Image = await fileToBase64(file);
-    siteData.hero.image = base64Image;
-    document.getElementById('hero-preview').src = base64Image;
-  }
+  if (!file) return;
+
+  const preview = document.getElementById('hero-preview');
+  preview.style.opacity = '0.4';
+
+  // Resmi arka planda sıkıştır
+  const compressedImg = await compressAndResizeImage(file, 1000, 0.8);
+  siteData.hero.image = compressedImg;
+  preview.src = compressedImg;
+  preview.style.opacity = '1';
 });
 
-// Galeriden Toplu Fotoğraf Yükleme
+// Galeriye Resim Yükleme
 document.getElementById('gallery-file-input').addEventListener('change', async (e) => {
   const files = Array.from(e.target.files);
   for (const file of files) {
-    const base64Image = await fileToBase64(file);
-    siteData.gallery.push(base64Image);
+    // Galeri fotoğraflarını 800px genişliğe sıkıştır
+    const compressedImg = await compressAndResizeImage(file, 800, 0.75);
+    siteData.gallery.push(compressedImg);
   }
   renderGallery();
 });
@@ -54,6 +85,7 @@ document.getElementById('gallery-file-input').addEventListener('change', async (
 // Galeri Ekranını Çiz
 function renderGallery() {
   const container = document.getElementById('gallery-preview-container');
+  if (!container) return;
   container.innerHTML = '';
 
   siteData.gallery.forEach((imgSrc, index) => {
@@ -79,9 +111,13 @@ document.getElementById('save-all-btn').addEventListener('click', () => {
   siteData.hero.title2 = document.getElementById('hero-title-2').value;
   siteData.hero.description = document.getElementById('hero-description').value;
 
-  localStorage.setItem('salonYilmazData', JSON.stringify(siteData));
-  alert('Görseller ve yazılar başarıyla kaydedildi!');
+  try {
+    localStorage.setItem('salonYilmazData', JSON.stringify(siteData));
+    alert('Görseller ve yazılar başarıyla kaydedildi!');
+  } catch (error) {
+    alert('Çok fazla resim yüklendi! Lütfen bazı galeri resimlerini silip tekrar deneyin.');
+  }
 });
 
 document.addEventListener('DOMContentLoaded', initPanel);
-  
+        
