@@ -26,13 +26,20 @@
         <span class="text-brand font-black text-xl tracking-wider uppercase">Salon Yılmaz</span>
         <span class="text-xs bg-brand/10 text-brand px-2.5 py-1 rounded-full font-bold">Yazı Paneli</span>
       </div>
-      <button id="copy-code-btn" type="button" class="bg-brand text-black font-extrabold px-6 py-2 rounded-full text-xs uppercase tracking-wider hover:shadow-[0_0_20px_rgba(163,255,18,0.5)] transition cursor-pointer">
-        📋 Yeni Kodları Kopyala
+      <button id="generate-code-btn" type="button" class="bg-brand text-black font-extrabold px-6 py-2 rounded-full text-xs uppercase tracking-wider hover:shadow-[0_0_20px_rgba(163,255,18,0.5)] transition cursor-pointer">
+        ⚡ Kodu Üret
       </button>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 mt-8 space-y-8">
+
+    <!-- KOD ÇIKTI ALANI (Başlangıçta Gizli) -->
+    <section id="code-output-section" class="hidden bg-brand/10 border border-brand/40 rounded-xl p-6">
+      <h2 class="text-sm font-bold text-brand uppercase mb-2">📋 Oluşturulan Kodu Kopyalayın:</h2>
+      <p class="text-xs text-white/70 mb-3">Aşağıdaki kutunun içindeki tüm yazıları kopyalayıp GitHub'daki <b>data.js</b> dosyasına yapıştırın.</p>
+      <textarea id="code-output-box" rows="8" readonly class="w-full bg-black border border-brand/30 rounded-lg p-3 text-xs font-mono text-brand focus:outline-none select-all"></textarea>
+    </section>
 
     <!-- HERO BÖLÜMÜ -->
     <section class="bg-brand-card border border-brand-border rounded-xl p-6">
@@ -87,4 +94,5 @@
   <script src="data.js"></script>
   <script src="admin.js"></script>
 </body>
-</html>
+            </html>
+            
