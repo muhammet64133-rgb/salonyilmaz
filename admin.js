@@ -1,77 +1,88 @@
-// Varsayılan Bilgiler
-const defaultData = {
-  hero: {
-    title1: "TARZINI",
-    title2: "YÜKSELT",
-    description: "Erkeklerin yeni nesil duruşu. Özenli bakım, keskin stil.",
-    image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1000&auto=format&fit=crop"
-  },
-  services: [
-    { title: "SAÇ KESİM", desc: "Keskin stiller, mükemmel sonuçlar." },
-    { title: "SAKAL & TRAŞ", desc: "Tıraş, şekillendirme ve bakım." },
-    { title: "SAÇ & SAKAL BAKIM", desc: "Saç, cilt ve sakal için özenli bakım." },
-    { title: "RENKLENDİRME", desc: "Kişiye özel renk çözümleri." }
-  ],
-  gallery: [],
-  contact: {
-    phone: "0507 577 10 22",
-    hours: "Pzt–Cmt 09:00–21:00",
-    address: "Arda Mahallesi 3205 Sokak 18/B, Manisa"
-  }
-};
+let siteData = window.siteData || {};
 
-let siteData = JSON.parse(localStorage.getItem('salonYilmazData')) || defaultData;
-
-// Sayfa Yüklendiğinde
 function initPanel() {
-  // Hero
-  if (document.getElementById('hero-title-1')) document.getElementById('hero-title-1').value = siteData.hero.title1 || '';
-  if (document.getElementById('hero-title-2')) document.getElementById('hero-title-2').value = siteData.hero.title2 || '';
-  if (document.getElementById('hero-description')) document.getElementById('hero-description').value = siteData.hero.description || '';
-  if (document.getElementById('hero-preview')) document.getElementById('hero-preview').src = siteData.hero.image || '';
+  // GitHub Ayarlarını Hatırla
+  if (document.getElementById('gh-username')) document.getElementById('gh-username').value = localStorage.getItem('gh_username') || '';
+  if (document.getElementById('gh-repo')) document.getElementById('gh-repo').value = localStorage.getItem('gh_repo') || '';
+  if (document.getElementById('gh-token')) document.getElementById('gh-token').value = localStorage.getItem('gh_token') || '';
 
-  // Hizmetler
+  // Mevcut Verileri Formlara Doldur
+  document.getElementById('hero-title-1').value = siteData.hero?.title1 || '';
+  document.getElementById('hero-title-2').value = siteData.hero?.title2 || '';
+  document.getElementById('hero-description').value = siteData.hero?.description || '';
+  
+  const preview = document.getElementById('hero-preview');
+  if (preview && siteData.hero?.image) preview.src = siteData.hero.image;
+
   renderServices();
-
-  // Galeri
   renderGallery();
 
-  // İletişim
-  if (document.getElementById('contact-phone')) document.getElementById('contact-phone').value = siteData.contact?.phone || '';
-  if (document.getElementById('contact-hours')) document.getElementById('contact-hours').value = siteData.contact?.hours || '';
-  if (document.getElementById('contact-address')) document.getElementById('contact-address').value = siteData.contact?.address || '';
+  document.getElementById('contact-phone').value = siteData.contact?.phone || '';
+  document.getElementById('contact-hours').value = siteData.contact?.hours || '';
+  document.getElementById('contact-address').value = siteData.contact?.address || '';
 }
 
-// Resim Sıkıştırma (Canvas)
-function compressAndResizeImage(file, maxWidth = 1000, quality = 0.75) {
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = (event) => {
-      const img = new Image();
-      img.src = event.target.result;
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        let width = img.width;
-        let height = img.height;
+// Resim Yükleme (ImgBB)
+async function uploadImageToCloud(file) {
+  const formData = new FormData();
+  formData.append('image', file);
 
-        if (width > maxWidth) {
-          height = Math.round((height * maxWidth) / width);
-          width = maxWidth;
-        }
-
-        canvas.width = width;
-        canvas.height = height;
-
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0, width, height);
-        resolve(canvas.toDataURL('image/jpeg', quality));
-      };
-    };
-  });
+  try {
+    const res = await fetch('https://api.imgbb.com/1/upload?key=c304f5fa44b0e9d63c40134f0d3663b7', {
+      method: 'POST',
+      body: formData
+    });
+    const data = await res.json();
+    return data.success ? data.data.url : null;
+  } catch (err) {
+    alert("Resim yüklenirken hata oluştu.");
+    return null;
+  }
 }
 
-// Hizmetleri Ekrana Çiz
+// Hero Resmi Seçildiğinde
+document.getElementById('hero-file-input')?.addEventListener('change', async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const status = document.getElementById('hero-upload-status');
+  const preview = document.getElementById('hero-preview');
+  
+  if (status) status.classList.remove('hidden');
+  if (preview) preview.style.opacity = '0.3';
+
+  const uploadedUrl = await uploadImageToCloud(file);
+  
+  if (uploadedUrl) {
+    siteData.hero.image = uploadedUrl;
+    if (preview) preview.src = uploadedUrl;
+  }
+
+  if (status) status.classList.add('hidden');
+  if (preview) preview.style.opacity = '1';
+});
+
+// Galeriye Resim Yükleme
+document.getElementById('gallery-file-input')?.addEventListener('change', async (e) => {
+  const files = Array.from(e.target.files);
+  if (!files.length) return;
+
+  const status = document.getElementById('gallery-upload-status');
+  if (status) status.classList.remove('hidden');
+
+  if (!siteData.gallery) siteData.gallery = [];
+
+  for (const file of files) {
+    const uploadedUrl = await uploadImageToCloud(file);
+    if (uploadedUrl) {
+      siteData.gallery.push(uploadedUrl);
+      renderGallery();
+    }
+  }
+
+  if (status) status.classList.add('hidden');
+});
+
 function renderServices() {
   const container = document.getElementById('services-container');
   if (!container) return;
@@ -88,7 +99,6 @@ function renderServices() {
   });
 }
 
-// Galeri Ekrana Çiz
 function renderGallery() {
   const container = document.getElementById('gallery-preview-container');
   if (!container) return;
@@ -98,7 +108,7 @@ function renderGallery() {
     container.innerHTML += `
       <div class="relative group rounded-lg overflow-hidden border border-brand-border h-32">
         <img src="${imgSrc}" class="w-full h-full object-cover">
-        <button onclick="deleteGalleryImg(${index})" class="absolute top-1 right-1 bg-red-600 text-white text-[10px] px-2 py-1 rounded opacity-90 hover:opacity-100">
+        <button type="button" onclick="deleteGalleryImg(${index})" class="absolute top-1 right-1 bg-red-600 text-white text-[10px] px-2 py-1 rounded opacity-90 hover:opacity-100 cursor-pointer">
           Sil
         </button>
       </div>
@@ -111,59 +121,81 @@ function deleteGalleryImg(index) {
   renderGallery();
 }
 
-// Hero Resmi Seçildiğinde
-document.getElementById('hero-file-input')?.addEventListener('change', async (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
+// GİTHUB API İLE DOĞRUDAN KAYDETME
+document.getElementById('save-github-btn')?.addEventListener('click', async () => {
+  const username = document.getElementById('gh-username').value.trim();
+  const repo = document.getElementById('gh-repo').value.trim();
+  const token = document.getElementById('gh-token').value.trim();
 
-  const preview = document.getElementById('hero-preview');
-  if (preview) preview.style.opacity = '0.3';
-
-  const compressedImg = await compressAndResizeImage(file, 1000, 0.75);
-  siteData.hero.image = compressedImg;
-  if (preview) {
-    preview.src = compressedImg;
-    preview.style.opacity = '1';
+  if (!username || !repo || !token) {
+    alert("⚠️ Lütfen en üstteki GitHub Kullanıcı Adı, Repo Adı ve Token alanlarını doldurun!");
+    return;
   }
-});
 
-// Galeriye Resim Yükleme
-document.getElementById('gallery-file-input')?.addEventListener('change', async (e) => {
-  const files = Array.from(e.target.files);
-  if (!siteData.gallery) siteData.gallery = [];
+  // Bilgileri sonraki kullanımlar için sakla
+  localStorage.setItem('gh_username', username);
+  localStorage.setItem('gh_repo', repo);
+  localStorage.setItem('gh_token', token);
 
-  for (const file of files) {
-    const compressedImg = await compressAndResizeImage(file, 800, 0.70);
-    siteData.gallery.push(compressedImg);
-  }
-  renderGallery();
-});
+  const saveBtn = document.getElementById('save-github-btn');
+  saveBtn.innerText = "⏳ Kaydediliyor...";
+  saveBtn.disabled = true;
 
-// Kaydet Butonu
-document.getElementById('save-all-btn')?.addEventListener('click', () => {
+  // Form Verilerini Topla
+  siteData.hero.title1 = document.getElementById('hero-title-1').value;
+  siteData.hero.title2 = document.getElementById('hero-title-2').value;
+  siteData.hero.description = document.getElementById('hero-description').value;
+
+  siteData.services = (siteData.services || []).map((_, idx) => ({
+    title: document.getElementById(`srv-title-${idx}`).value,
+    desc: document.getElementById(`srv-desc-${idx}`).value
+  }));
+
+  if (!siteData.contact) siteData.contact = {};
+  siteData.contact.phone = document.getElementById('contact-phone').value;
+  siteData.contact.hours = document.getElementById('contact-hours').value;
+  siteData.contact.address = document.getElementById('contact-address').value;
+
+  const newContent = `window.siteData = ${JSON.stringify(siteData, null, 2)};`;
+  const encodedContent = btoa(unescape(encodeURIComponent(newContent)));
+
   try {
-    // Hero Kaydet
-    siteData.hero.title1 = document.getElementById('hero-title-1').value;
-    siteData.hero.title2 = document.getElementById('hero-title-2').value;
-    siteData.hero.description = document.getElementById('hero-description').value;
+    // 1. Önce mevcut data.js'in SHA kodunu al
+    const getFile = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/data.js`, {
+      headers: { 'Authorization': `token ${token}` }
+    });
 
-    // Hizmetleri Kaydet
-    siteData.services = (siteData.services || []).map((_, idx) => ({
-      title: document.getElementById(`srv-title-${idx}`).value,
-      desc: document.getElementById(`srv-desc-${idx}`).value
-    }));
+    let sha = '';
+    if (getFile.ok) {
+      const fileData = await getFile.json();
+      sha = fileData.sha;
+    }
 
-    // İletişim Kaydet
-    if (!siteData.contact) siteData.contact = {};
-    siteData.contact.phone = document.getElementById('contact-phone').value;
-    siteData.contact.hours = document.getElementById('contact-hours').value;
-    siteData.contact.address = document.getElementById('contact-address').value;
+    // 2. GitHub API üzerinden dosyayı güncelle
+    const updateFile = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/data.js`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `token ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message: 'Panelden otomatik güncelleme',
+        content: encodedContent,
+        sha: sha || undefined
+      })
+    });
 
-    // LocalStorage Kaydet
-    localStorage.setItem('salonYilmazData', JSON.stringify(siteData));
-    alert('✅ Tüm değişiklikler başarıyla kaydedildi!');
-  } catch (error) {
-    alert('⚠️ Hafıza doldu! Lütfen bazı galeri resimlerini silip tekrar deneyin.');
+    if (updateFile.ok) {
+      alert("✅ Harika! Değişiklikler GitHub'a doğrudan kaydedildi.\n\nSiteniz 1-2 dakika içinde güncellenecektir.");
+    } else {
+      const errRes = await updateFile.json();
+      alert("⚠️ Güncelleme Başarısız: " + (errRes.message || "Bilinmeyen hata"));
+    }
+  } catch (err) {
+    alert("⚠️ Bağlantı Hatası: " + err.message);
+  } finally {
+    saveBtn.innerText = "💾 GitHub'a Doğrudan Kaydet";
+    saveBtn.disabled = false;
   }
 });
 
