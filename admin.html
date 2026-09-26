@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salon Yılmaz | Yönetim Paneli</title>
+  <title>Salon Yılmaz | Tam Yönetim Paneli</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script>
@@ -24,7 +24,7 @@
     <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <span class="text-brand font-black text-xl tracking-wider uppercase">Salon Yılmaz</span>
-        <span class="text-xs bg-brand/10 text-brand px-2.5 py-1 rounded-full font-bold">Yazı Paneli</span>
+        <span class="text-xs bg-brand/10 text-brand px-2.5 py-1 rounded-full font-bold">Tam İçerik Paneli</span>
       </div>
       <button onclick="generateCode()" type="button" class="bg-brand text-black font-extrabold px-6 py-2 rounded-full text-xs uppercase tracking-wider hover:shadow-[0_0_20px_rgba(163,255,18,0.5)] transition cursor-pointer">
         ⚡ KODU ÜRET
@@ -37,32 +37,67 @@
     <!-- KOD ÇIKTI ALANI -->
     <section id="code-section" class="hidden bg-brand/10 border border-brand/40 rounded-xl p-6">
       <h2 class="text-sm font-bold text-brand uppercase mb-2">📋 Yeni Kodunuz Hazır!</h2>
-      <p class="text-xs text-white/70 mb-3">Aşağıdaki siyah kutunun içine dokunun, <b>Hepsini Seç</b> deyip kopyalayın. Ardından GitHub'daki <b>data.js</b> dosyasına yapıştırın.</p>
-      <textarea id="code-box" rows="8" readonly class="w-full bg-black border border-brand/30 rounded-lg p-3 text-xs font-mono text-brand focus:outline-none"></textarea>
+      <p class="text-xs text-white/70 mb-3">Aşağıdaki siyah kutunun içine dokunun, <b>Tümünü Seç</b> yapıp kopyalayın. Ardından GitHub'daki <b>data.js</b> dosyasına yapıştırın.</p>
+      <textarea id="code-box" rows="10" readonly class="w-full bg-black border border-brand/30 rounded-lg p-3 text-xs font-mono text-brand focus:outline-none"></textarea>
     </section>
 
     <!-- HERO BÖLÜMÜ -->
     <section class="bg-brand-card border border-brand-border rounded-xl p-6 space-y-4">
-      <h2 class="text-lg font-bold text-brand uppercase border-b border-white/5 pb-2">1. Ana Sayfa Başlıkları</h2>
+      <h2 class="text-lg font-bold text-brand uppercase border-b border-white/5 pb-2">1. Ana Sayfa (Giriş) Alanı</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label class="block text-xs uppercase text-white/60 mb-1">Başlık Satır 1</label>
           <input type="text" id="h-title1" value="TARZINI" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm text-white outline-none focus:border-brand">
         </div>
         <div>
-          <label class="block text-xs uppercase text-white/60 mb-1">Başlık Satır 2 (Yeşil)</label>
+          <label class="block text-xs uppercase text-white/60 mb-1">Başlık Satır 2 (Yeşil Yazı)</label>
           <input type="text" id="h-title2" value="YÜKSELT" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm text-white outline-none focus:border-brand">
         </div>
       </div>
       <div>
-        <label class="block text-xs uppercase text-white/60 mb-1">Açıklama Metni</label>
+        <label class="block text-xs uppercase text-white/60 mb-1">Ana Sayfa Açıklama Metni</label>
         <textarea id="h-desc" rows="2" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm text-white outline-none focus:border-brand">Erkeklerin yeni nesil duruşu. Özenli bakım, keskin stil.</textarea>
+      </div>
+    </section>
+
+    <!-- HİZMETLER BÖLÜMÜ -->
+    <section class="bg-brand-card border border-brand-border rounded-xl p-6 space-y-4">
+      <h2 class="text-lg font-bold text-brand uppercase border-b border-white/5 pb-2">2. Hizmet Kartları (4 Adet)</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Hizmet 1 -->
+        <div class="bg-[#08080a] p-4 rounded-lg border border-brand-border space-y-2">
+          <span class="text-xs text-brand font-bold uppercase">Hizmet 1</span>
+          <input type="text" id="s1-title" value="SAÇ KESİM" class="w-full bg-[#141416] border border-brand-border rounded p-2 text-sm text-white font-bold outline-none">
+          <input type="text" id="s1-desc" value="Keskin stiller, mükemmel sonuçlar." class="w-full bg-[#141416] border border-brand-border rounded p-2 text-xs text-white/80 outline-none">
+        </div>
+
+        <!-- Hizmet 2 -->
+        <div class="bg-[#08080a] p-4 rounded-lg border border-brand-border space-y-2">
+          <span class="text-xs text-brand font-bold uppercase">Hizmet 2</span>
+          <input type="text" id="s2-title" value="SAKAL & TRAŞ" class="w-full bg-[#141416] border border-brand-border rounded p-2 text-sm text-white font-bold outline-none">
+          <input type="text" id="s2-desc" value="Tıraş, şekillendirme ve bakım." class="w-full bg-[#141416] border border-brand-border rounded p-2 text-xs text-white/80 outline-none">
+        </div>
+
+        <!-- Hizmet 3 -->
+        <div class="bg-[#08080a] p-4 rounded-lg border border-brand-border space-y-2">
+          <span class="text-xs text-brand font-bold uppercase">Hizmet 3</span>
+          <input type="text" id="s3-title" value="SAÇ & SAKAL BAKIM" class="w-full bg-[#141416] border border-brand-border rounded p-2 text-sm text-white font-bold outline-none">
+          <input type="text" id="s3-desc" value="Saç, cilt ve sakal için özenli bakım." class="w-full bg-[#141416] border border-brand-border rounded p-2 text-xs text-white/80 outline-none">
+        </div>
+
+        <!-- Hizmet 4 -->
+        <div class="bg-[#08080a] p-4 rounded-lg border border-brand-border space-y-2">
+          <span class="text-xs text-brand font-bold uppercase">Hizmet 4</span>
+          <input type="text" id="s4-title" value="RENKLENDİRME" class="w-full bg-[#141416] border border-brand-border rounded p-2 text-sm text-white font-bold outline-none">
+          <input type="text" id="s4-desc" value="Kişiye özel renk çözümleri." class="w-full bg-[#141416] border border-brand-border rounded p-2 text-xs text-white/80 outline-none">
+        </div>
       </div>
     </section>
 
     <!-- İLETİŞİM BÖLÜMÜ -->
     <section class="bg-brand-card border border-brand-border rounded-xl p-6 space-y-4">
-      <h2 class="text-lg font-bold text-brand uppercase border-b border-white/5 pb-2">2. İletişim Bilgileri</h2>
+      <h2 class="text-lg font-bold text-brand uppercase border-b border-white/5 pb-2">3. İletişim Bilgileri</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label class="block text-xs uppercase text-white/60 mb-1">Telefon</label>
@@ -73,7 +108,7 @@
           <input type="text" id="c-hours" value="Pzt–Cmt 09:00–21:00" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm text-white outline-none focus:border-brand">
         </div>
         <div class="md:col-span-2">
-          <label class="block text-xs uppercase text-white/60 mb-1">Adres</label>
+          <label class="block text-xs uppercase text-white/60 mb-1">Adres Bilgisi</label>
           <input type="text" id="c-addr" value="Arda Mahallesi 3205 Sokak 18/B, Manisa" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm text-white outline-none focus:border-brand">
         </div>
       </div>
@@ -91,10 +126,10 @@
           image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1000&auto=format&fit=crop"
         },
         services: [
-          { title: "SAÇ KESİM", desc: "Keskin stiller, mükemmel sonuçlar." },
-          { title: "SAKAL & TRAŞ", desc: "Tıraş, şekillendirme ve bakım." },
-          { title: "SAÇ & SAKAL BAKIM", desc: "Saç, cilt ve sakal için özenli bakım." },
-          { title: "RENKLENDİRME", desc: "Kişiye özel renk çözümleri." }
+          { title: document.getElementById('s1-title').value, desc: document.getElementById('s1-desc').value },
+          { title: document.getElementById('s2-title').value, desc: document.getElementById('s2-desc').value },
+          { title: document.getElementById('s3-title').value, desc: document.getElementById('s3-desc').value },
+          { title: document.getElementById('s4-title').value, desc: document.getElementById('s4-desc').value }
         ],
         contact: {
           phone: document.getElementById('c-phone').value,
@@ -115,4 +150,4 @@
   </script>
 </body>
   </html>
-  
+            
