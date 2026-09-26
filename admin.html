@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salon Yılmaz | Tam Yönetim Paneli</title>
+  <title>Salon Yılmaz | Tüm Site Yönetim Paneli</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script>
@@ -41,52 +41,52 @@
       <textarea id="code-box" rows="10" readonly class="w-full bg-black border border-brand/30 rounded-lg p-3 text-xs font-mono text-brand focus:outline-none"></textarea>
     </section>
 
-    <!-- HERO BÖLÜMÜ -->
+    <!-- HERO / KARŞILAMA BÖLÜMÜ -->
     <section class="bg-brand-card border border-brand-border rounded-xl p-6 space-y-4">
-      <h2 class="text-lg font-bold text-brand uppercase border-b border-white/5 pb-2">1. Ana Sayfa (Giriş) Alanı</h2>
+      <h2 class="text-lg font-bold text-brand uppercase border-b border-white/5 pb-2">1. Ana Sayfa (Karşılama) Yazıları</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-xs uppercase text-white/60 mb-1">Başlık Satır 1</label>
+          <label class="block text-xs uppercase text-white/60 mb-1">Ana Başlık (Beyaz)</label>
           <input type="text" id="h-title1" value="TARZINI" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm text-white outline-none focus:border-brand">
         </div>
         <div>
-          <label class="block text-xs uppercase text-white/60 mb-1">Başlık Satır 2 (Yeşil Yazı)</label>
+          <label class="block text-xs uppercase text-white/60 mb-1">Ana Başlık (Yeşil Vurgu)</label>
           <input type="text" id="h-title2" value="YÜKSELT" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm text-white outline-none focus:border-brand">
         </div>
       </div>
       <div>
-        <label class="block text-xs uppercase text-white/60 mb-1">Ana Sayfa Açıklama Metni</label>
+        <label class="block text-xs uppercase text-white/60 mb-1">Giriş Açıklama Metni</label>
         <textarea id="h-desc" rows="2" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm text-white outline-none focus:border-brand">Erkeklerin yeni nesil duruşu. Özenli bakım, keskin stil.</textarea>
+      </div>
+      <div>
+        <label class="block text-xs uppercase text-white/60 mb-1">Model / Arka Plan Resim Linki (Opsiyonel)</label>
+        <input type="text" id="h-img" value="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1000&auto=format&fit=crop" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm text-white/70 outline-none focus:border-brand">
       </div>
     </section>
 
     <!-- HİZMETLER BÖLÜMÜ -->
     <section class="bg-brand-card border border-brand-border rounded-xl p-6 space-y-4">
-      <h2 class="text-lg font-bold text-brand uppercase border-b border-white/5 pb-2">2. Hizmet Kartları (4 Adet)</h2>
+      <h2 class="text-lg font-bold text-brand uppercase border-b border-white/5 pb-2">2. Hizmet Kartları (Başlık & Açıklamalar)</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!-- Hizmet 1 -->
         <div class="bg-[#08080a] p-4 rounded-lg border border-brand-border space-y-2">
           <span class="text-xs text-brand font-bold uppercase">Hizmet 1</span>
           <input type="text" id="s1-title" value="SAÇ KESİM" class="w-full bg-[#141416] border border-brand-border rounded p-2 text-sm text-white font-bold outline-none">
           <input type="text" id="s1-desc" value="Keskin stiller, mükemmel sonuçlar." class="w-full bg-[#141416] border border-brand-border rounded p-2 text-xs text-white/80 outline-none">
         </div>
 
-        <!-- Hizmet 2 -->
         <div class="bg-[#08080a] p-4 rounded-lg border border-brand-border space-y-2">
           <span class="text-xs text-brand font-bold uppercase">Hizmet 2</span>
           <input type="text" id="s2-title" value="SAKAL & TRAŞ" class="w-full bg-[#141416] border border-brand-border rounded p-2 text-sm text-white font-bold outline-none">
           <input type="text" id="s2-desc" value="Tıraş, şekillendirme ve bakım." class="w-full bg-[#141416] border border-brand-border rounded p-2 text-xs text-white/80 outline-none">
         </div>
 
-        <!-- Hizmet 3 -->
         <div class="bg-[#08080a] p-4 rounded-lg border border-brand-border space-y-2">
           <span class="text-xs text-brand font-bold uppercase">Hizmet 3</span>
           <input type="text" id="s3-title" value="SAÇ & SAKAL BAKIM" class="w-full bg-[#141416] border border-brand-border rounded p-2 text-sm text-white font-bold outline-none">
           <input type="text" id="s3-desc" value="Saç, cilt ve sakal için özenli bakım." class="w-full bg-[#141416] border border-brand-border rounded p-2 text-xs text-white/80 outline-none">
         </div>
 
-        <!-- Hizmet 4 -->
         <div class="bg-[#08080a] p-4 rounded-lg border border-brand-border space-y-2">
           <span class="text-xs text-brand font-bold uppercase">Hizmet 4</span>
           <input type="text" id="s4-title" value="RENKLENDİRME" class="w-full bg-[#141416] border border-brand-border rounded p-2 text-sm text-white font-bold outline-none">
@@ -95,12 +95,28 @@
       </div>
     </section>
 
+    <!-- GALERİ RESİMLERİ -->
+    <section class="bg-brand-card border border-brand-border rounded-xl p-6 space-y-4">
+      <h2 class="text-lg font-bold text-brand uppercase border-b border-white/5 pb-2">3. Galeri Fotoğraf Bağlantıları (URL)</h2>
+      <p class="text-xs text-white/60">Göstermek istediğiniz resim linklerini buraya ekleyebilirsiniz.</p>
+      <div class="space-y-3">
+        <div>
+          <label class="block text-xs uppercase text-white/50 mb-1">Fotoğraf 1 URL</label>
+          <input type="text" id="g-img1" value="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-2.5 text-xs text-white outline-none focus:border-brand">
+        </div>
+        <div>
+          <label class="block text-xs uppercase text-white/50 mb-1">Fotoğraf 2 URL</label>
+          <input type="text" id="g-img2" value="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-2.5 text-xs text-white outline-none focus:border-brand">
+        </div>
+      </div>
+    </section>
+
     <!-- İLETİŞİM BÖLÜMÜ -->
     <section class="bg-brand-card border border-brand-border rounded-xl p-6 space-y-4">
-      <h2 class="text-lg font-bold text-brand uppercase border-b border-white/5 pb-2">3. İletişim Bilgileri</h2>
+      <h2 class="text-lg font-bold text-brand uppercase border-b border-white/5 pb-2">4. İletişim Bilgileri</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-xs uppercase text-white/60 mb-1">Telefon</label>
+          <label class="block text-xs uppercase text-white/60 mb-1">Telefon Numarası</label>
           <input type="text" id="c-phone" value="0507 577 10 22" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm text-white outline-none focus:border-brand">
         </div>
         <div>
@@ -108,7 +124,7 @@
           <input type="text" id="c-hours" value="Pzt–Cmt 09:00–21:00" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm text-white outline-none focus:border-brand">
         </div>
         <div class="md:col-span-2">
-          <label class="block text-xs uppercase text-white/60 mb-1">Adres Bilgisi</label>
+          <label class="block text-xs uppercase text-white/60 mb-1">Açık Adres Metni</label>
           <input type="text" id="c-addr" value="Arda Mahallesi 3205 Sokak 18/B, Manisa" class="w-full bg-[#08080a] border border-brand-border rounded-lg p-3 text-sm text-white outline-none focus:border-brand">
         </div>
       </div>
@@ -123,13 +139,17 @@
           title1: document.getElementById('h-title1').value,
           title2: document.getElementById('h-title2').value,
           description: document.getElementById('h-desc').value,
-          image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1000&auto=format&fit=crop"
+          image: document.getElementById('h-img').value
         },
         services: [
           { title: document.getElementById('s1-title').value, desc: document.getElementById('s1-desc').value },
           { title: document.getElementById('s2-title').value, desc: document.getElementById('s2-desc').value },
           { title: document.getElementById('s3-title').value, desc: document.getElementById('s3-desc').value },
           { title: document.getElementById('s4-title').value, desc: document.getElementById('s4-desc').value }
+        ],
+        gallery: [
+          document.getElementById('g-img1').value,
+          document.getElementById('g-img2').value
         ],
         contact: {
           phone: document.getElementById('c-phone').value,
@@ -149,5 +169,5 @@
     }
   </script>
 </body>
-  </html>
+            </html>
             
