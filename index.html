@@ -607,5 +607,22 @@
       window.open('https://wa.me/905075771022?text=' + msg, '_blank');
     });
   </script>
-</body>
+</body><script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedData = JSON.parse(localStorage.getItem('salonYilmazData'));
+    if (!savedData) return;
+
+    // Hero Alanını Güncelle
+    const heroTitle1 = document.querySelector('#anasayfa h1 span:nth-child(1)');
+    const heroTitle2 = document.querySelector('#anasayfa h1 span:nth-child(2)');
+    const heroDesc = document.querySelector('#anasayfa p');
+    const heroImg = document.querySelector('#anasayfa img');
+
+    if (heroTitle1) heroTitle1.textContent = savedData.hero.title1;
+    if (heroTitle2) heroTitle2.textContent = savedData.hero.title2;
+    if (heroDesc) heroDesc.childNodes[0].textContent = savedData.hero.description + " ";
+    if (heroImg) heroImg.src = savedData.hero.imageUrl;
+  });
+</script>
+  
 </html>
